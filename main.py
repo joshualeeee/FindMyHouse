@@ -14,7 +14,7 @@ driver.get(url)
 WebDriverWait(driver,30).until(EC.presence_of_element_located((By.XPATH,'/html/body/div[1]/main/section/div[1]/section[2]/div[2]')))
 source = driver.page_source
 soup = BeautifulSoup(source, 'html.parser')
-
+# hello
 parent = soup.find('div', 'placardContainer').find('ul')
 listings = parent.find_all('li', "mortar-wrapper")
 print(len(listings))
