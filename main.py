@@ -29,7 +29,7 @@ parent = soup.find('div', 'placardContainer').find('ul')
 listings = parent.find_all('li', "mortar-wrapper")
 
 
-print(len(listings))
+print(len(listings) + " houses found.")
 for i in listings:
     link = i.find("article")
     print(link.get('data-url'))
